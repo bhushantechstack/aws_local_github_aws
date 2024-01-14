@@ -49,9 +49,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
 
-    # steps:
-    # - name: Checkout
-    #   uses: actions/checkout@v4
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
 
     # - name: Install Node
     #   uses: action/setup-node@v4
