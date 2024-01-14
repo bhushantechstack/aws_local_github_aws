@@ -25,8 +25,8 @@ jobs:
           node-version: "16"
       - name: Install Python dependencies and CDK
         run: |
+          mpm install
           npm install -g aws-cdk
-          npm install -g aws-cdk-lib
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@master
         with:
