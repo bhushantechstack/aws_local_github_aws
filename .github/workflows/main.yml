@@ -26,6 +26,7 @@ jobs:
       - name: Install Python dependencies and CDK
         run: |
           npm install -g aws-cdk
+          npm install -g aws-cdk-lib
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@master
         with:
@@ -36,5 +37,3 @@ jobs:
         run: |
           cdk synth HelloStack
           cdk deploy HelloStack
-      - name: Destroy stack
-        run: cdk destroy --app="python3 ${PWD}/cdk/my_service/app.py" --force
