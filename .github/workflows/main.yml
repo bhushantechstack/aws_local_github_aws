@@ -74,10 +74,10 @@ jobs:
       env:
         ENV_NAME: production
       with:
-        aws-account-number: ${{ secrets.AWS_ACCOUNT_NUMBER }}
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
+        mask-aws-account-id: ${{ secrets.AWS_ACCOUNT_NUMBER }}
     
     - name: Synthesize and Deploy mycdk
       env:
