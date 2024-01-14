@@ -36,4 +36,5 @@ jobs:
       - name: Deploy to AWS
         run: |
           cdk synth HelloStack
+          cdk bootstrap HelloStack
           cdk deploy HelloStack
