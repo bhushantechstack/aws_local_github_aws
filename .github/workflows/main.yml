@@ -51,7 +51,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     # - name: Install Node
     #   uses: action/setup-node@v4
@@ -62,7 +62,7 @@ jobs:
       run: npm install
 
     - name: Installing cdk
-      run: npm install -g aws-cdk@2.105.0
+      run: npm install -g aws-cdk
 
     # - name: Set up python 3.11
     #   uses: action/setup-python@v4
